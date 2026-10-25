@@ -1,27 +1,20 @@
-#include "PluginEditor.h"
+#pragma once
+#include <JuceHeader.h>
+#include "PluginProcessor.h"
 
-VoxAnchorAudioProcessorEditor::VoxAnchorAudioProcessorEditor (VoxAnchorAudioProcessor& p)
-    : AudioProcessorEditor (&p), audioProcessor (p), tooltipWindow (this, 700)
+class VoxAnchorAudioProcessorEditor : public juce::AudioProcessorEditor
 {
-    setResizable (true, true);
-    setResizeLimits (960, 640, 1920, 1200);
+public:
+    VoxAnchorAudioProcessorEditor (VoxAnchorAudioProcessor&);
+    ~VoxAnchorAudioProcessorEditor() override;
 
-    timeSlider.setSliderStyle (juce::Slider::LinearVertical);
-    timeSlider.setTextBoxStyle (juce::Slider::TextBoxBelow, false, 64, 20);
-    timeSlider.setTooltip ("Time Tightness: higher values lock timing closer to the reference. 0 = no timing correction.");
-    addAndMakeVisible (timeSlider);
+    void paint (juce::Graphics&) override;
+    void resized() override;
 
-    setSize (960, 640);
-}
+private:
+    VoxAnchorAudioProcessor& audioProcessor;
+    juce::Slider timeSlider;
+    juce::TooltipWindow tooltipWindow;
 
-VoxAnchorAudioProcessorEditor::~VoxAnchorAudioProcessorEditor() {}
-
-void VoxAnchorAudioProcessorEditor::paint (juce::Graphics& g)
-{
-    g.fillAll (juce::Colour (0xff0b1020));
-}
-
-void VoxAnchorAudioProcessorEditor::resized()
-{
-    timeSlider.setBounds (40, 40, 60, getHeight() - 80);
-}
+    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (VoxAnchorAudioProcessorEditor)
+};
