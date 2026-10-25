@@ -1,0 +1,102 @@
+[
+  {
+    "name": "Clean Lead",
+    "category": "Lead",
+    "parameters": { "timeEnabled": true, "timeTightness": 100, "pitchEnabled": true, "pitchTightness": 100, "pitchAlgorithm": "Absolute", "deNoise": "Auto", "timeWarp": "A", "transpose": 0, "formant": 0 }
+  },
+  {
+    "name": "Natural Double",
+    "category": "Double",
+    "parameters": { "timeEnabled": true, "timeTightness": 75, "pitchEnabled": true, "pitchTightness": 80, "pitchAlgorithm": "Absolute", "deNoise": "Auto", "timeWarp": "A", "transpose": 0, "formant": 0 }
+  },
+  {
+    "name": "Tight Double",
+    "category": "Double",
+    "parameters": { "timeEnabled": true, "timeTightness": 100, "pitchEnabled": true, "pitchTightness": 100, "pitchAlgorithm": "Absolute", "deNoise": "Auto", "timeWarp": "A", "transpose": 0, "formant": 0 }
+  },
+  {
+    "name": "Loose Double",
+    "category": "Double",
+    "parameters": { "timeEnabled": true, "timeTightness": 55, "pitchEnabled": true, "pitchTightness": 65, "pitchAlgorithm": "Absolute", "deNoise": "Off", "timeWarp": "A", "transpose": 0, "formant": 0 }
+  },
+  {
+    "name": "Harmony Tight",
+    "category": "Harmony",
+    "parameters": { "timeEnabled": true, "timeTightness": 100, "pitchEnabled": true, "pitchTightness": 90, "pitchAlgorithm": "Absolute", "deNoise": "Auto", "timeWarp": "A", "transpose": 0, "formant": 0 }
+  },
+  {
+    "name": "Harmony Natural",
+    "category": "Harmony",
+    "parameters": { "timeEnabled": true, "timeTightness": 70, "pitchEnabled": true, "pitchTightness": 75, "pitchAlgorithm": "Absolute", "deNoise": "Auto", "timeWarp": "A", "transpose": 0, "formant": 0 }
+  },
+  {
+    "name": "Backing Stack",
+    "category": "Harmony",
+    "parameters": { "timeEnabled": true, "timeTightness": 85, "pitchEnabled": true, "pitchTightness": 80, "pitchAlgorithm": "Absolute", "deNoise": "Auto", "timeWarp": "A", "transpose": 0, "formant": 0 }
+  },
+  {
+    "name": "Whisper Stack",
+    "category": "Harmony",
+    "parameters": { "timeEnabled": true, "timeTightness": 80, "pitchEnabled": true, "pitchTightness": 70, "pitchAlgorithm": "Absolute", "deNoise": "On", "timeWarp": "A", "transpose": 0, "formant": 0 }
+  },
+  {
+    "name": "ADR Match",
+    "category": "Utility",
+    "parameters": { "timeEnabled": true, "timeTightness": 100, "pitchEnabled": true, "pitchTightness": 100, "pitchAlgorithm": "Absolute", "deNoise": "Auto", "timeWarp": "B", "transpose": 0, "formant": 0 }
+  },
+  {
+    "name": "Podcast Voice",
+    "category": "Utility",
+    "parameters": { "timeEnabled": false, "timeTightness": 0, "pitchEnabled": false, "pitchTightness": 0, "pitchAlgorithm": "Absolute", "deNoise": "On", "timeWarp": "A", "transpose": 0, "formant": 0 }
+  },
+  {
+    "name": "Rap Lead",
+    "category": "Lead",
+    "parameters": { "timeEnabled": true, "timeTightness": 100, "pitchEnabled": true, "pitchTightness": 100, "pitchAlgorithm": "Absolute", "deNoise": "Auto", "timeWarp": "A", "transpose": 0, "formant": 0 }
+  },
+  {
+    "name": "Pop Lead",
+    "category": "Lead",
+    "parameters": { "timeEnabled": true, "timeTightness": 100, "pitchEnabled": true, "pitchTightness": 95, "pitchAlgorithm": "Absolute", "deNoise": "Auto", "timeWarp": "A", "transpose": 0, "formant": 0 }
+  },
+  {
+    "name": "Rock Lead",
+    "category": "Lead",
+    "parameters": { "timeEnabled": true, "timeTightness": 95, "pitchEnabled": true, "pitchTightness": 85, "pitchAlgorithm": "Absolute", "deNoise": "Off", "timeWarp": "B", "transpose": 0, "formant": 0 }
+  },
+  {
+    "name": "R&B Smooth",
+    "category": "Lead",
+    "parameters": { "timeEnabled": true, "timeTightness": 90, "pitchEnabled": true, "pitchTightness": 90, "pitchAlgorithm": "Absolute", "deNoise": "Auto", "timeWarp": "A", "transpose": 0, "formant": 0 }
+  },
+  {
+    "name": "EDM Vocal",
+    "category": "Lead",
+    "parameters": { "timeEnabled": true, "timeTightness": 100, "pitchEnabled": true, "pitchTightness": 100, "pitchAlgorithm": "Absolute", "deNoise": "Auto", "timeWarp": "A", "transpose": 0, "formant": 0 }
+  },
+  {
+    "name": "Lo-Fi Texture",
+    "category": "Creative",
+    "parameters": { "timeEnabled": true, "timeTightness": 60, "pitchEnabled": true, "pitchTightness": 50, "pitchAlgorithm": "Absolute", "deNoise": "Off", "timeWarp": "A", "transpose": 0, "formant": 0 }
+  },
+  {
+    "name": "DeNoise Heavy",
+    "category": "Utility",
+    "parameters": { "timeEnabled": true, "timeTightness": 100, "pitchEnabled": true, "pitchTightness": 100, "pitchAlgorithm": "Absolute", "deNoise": "On", "timeWarp": "B", "transpose": 0, "formant": 0 }
+  },
+  {
+    "name": "Pitch Safe",
+    "category": "Utility",
+    "parameters": { "timeEnabled": true, "timeTightness": 100, "pitchEnabled": true, "pitchTightness": 60, "pitchAlgorithm": "Abs Ignore Vibrato", "deNoise": "Auto", "timeWarp": "A", "transpose": 0, "formant": 0 }
+  },
+  {
+    "name": "TimeWarp B Safe",
+    "category": "Utility",
+    "parameters": { "timeEnabled": true, "timeTightness": 100, "pitchEnabled": true, "pitchTightness": 100, "pitchAlgorithm": "Absolute", "deNoise": "Auto", "timeWarp": "B", "transpose": 0, "formant": 0 }
+  },
+  {
+    "name": "Reset Neutral",
+    "category": "Default",
+    "parameters": { "timeEnabled": true, "timeTightness": 100, "pitchEnabled": true, "pitchTightness": 100, "pitchAlgorithm": "Absolute", "deNoise": "Auto", "timeWarp": "A", "transpose": 0, "formant": 0 }
+  }
+]
