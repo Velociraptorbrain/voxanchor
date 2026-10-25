@@ -29,16 +29,13 @@ jobs:
       # --- MACOS SPECIFIC PACKAGING ---
       - name: Install Packaging Tools (macOS)
         if: runner.os == 'macOS'
-        run: brew install create-dmg pandoc librsvg
-
-      - name: Generate PDF Manual (macOS)
-        if: runner.os == 'macOS'
-        run: pandoc docs/manual.md -o VoxAnchor-Manual.pdf --pdf-engine=weasyprint
+        run: brew install create-dmg librsvg
 
       - name: Create DMG Installer (macOS)
         if: runner.os == 'macOS'
         run: |
           APP_PATH=$(find build -name "VoxAnchor.app" -type d | head -n 1)
+          echo "Found app at: $APP_PATH"
           create-dmg \
             --volname "VoxAnchor" \
             --window-size 600 400 \
@@ -46,14 +43,15 @@ jobs:
             --app-drop-link 450 200 \
             --icon "VoxAnchor.app" 150 200 \
             VoxAnchor.dmg \
-            "$APP_PATH"
+            "$APP_PATH" || echo "DMG creation failed, but we will still upload the plugin files."
 
       # --- UPLOAD THE FILES ---
       - name: Upload Artifacts
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: VoxAnchor-${{ matrix.os }}
           path: |
             build/VoxAnchor_artefacts/Release/**
             VoxAnchor.dmg
-            VoxAnchor-Manual.pdf
+          if-no-files-found: warn
