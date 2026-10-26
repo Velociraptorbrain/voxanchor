@@ -12,6 +12,7 @@ jobs:
     name: Build on ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
     strategy:
+      fail-fast: false
       matrix:
         os: [macos-14, windows-2022]
 
@@ -21,7 +22,7 @@ jobs:
           submodules: recursive
 
       - name: Configure CMake
-        run: cmake -B build -DCMAKE_BUILD_TYPE=Release
+        run: cmake -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_OSX_ARCHITECTURES=arm64
 
       - name: Build
         run: cmake --build build --config Release
@@ -43,7 +44,7 @@ jobs:
             --app-drop-link 450 200 \
             --icon "VoxAnchor.app" 150 200 \
             VoxAnchor.dmg \
-            "$APP_PATH" || echo "DMG creation failed, but we will still upload the plugin files."
+            "$APP_PATH" || echo "DMG creation failed."
 
       # --- UPLOAD THE FILES ---
       - name: Upload Artifacts
