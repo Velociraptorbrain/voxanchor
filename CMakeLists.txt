@@ -58,6 +58,8 @@ juce_add_plugin("${PROJECT_NAME}"
     PLUGIN_CODE VxAn
     FORMATS "${FORMATS}"
     PRODUCT_NAME "${PRODUCT_NAME}")
+    
+juce_generate_juce_header("${PROJECT_NAME}")
 
 add_library(SharedCode INTERFACE)
 
